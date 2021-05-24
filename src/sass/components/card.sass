@@ -1,0 +1,29 @@
+@import "../../../node_modules/bulma/sass/components/card.sass";
+@import "../../../node_modules/bulma/sass/utilities/initial-variables.sass";
+    
+$card-background-color: $primary
+
+.card
+    border: 1px solid $grey-lightest
+    box-shadow: none
+
+.BlogCard
+    .card
+        &:hover
+            //box-shadow: inset 0 0 5px #dfdfdf;
+            box-shadow: $card-shadow
+            -webkit-transform: translateY(-.5rem)
+            transform: translateY(-.5rem)
+            z-index: 2
+
+.blog-post
+    .card
+        margin-top: -210px
+        @media screen and (max-width: 768px), print
+            margin-top: auto
+
+.card-footer
+    background-color: $secondary
+    color: $white
+    a
+        color: $white

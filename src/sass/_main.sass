@@ -1,0 +1,50 @@
+@charset "utf-8"
+
+// Initial variables - Override Bulma's main variables here
+$white: #fff
+$blue: #66b6de
+$twitter-blue: #55acee
+$light-grey: #fafafa
+$grey: #f1f1f1
+
+$primary: $white
+$secondary: $blue
+
+$footer-background-color: $grey
+$footer-padding: 3rem 1.5rem
+
+$body-background-color: $light-grey
+
+$tag-background-color: $secondary
+$tag-color: $white
+    
+// Import bulmas sass
+// Import only what you need from Bulma
+@import "../../node_modules/bulma/sass/base/_all.sass";
+@import "../../node_modules/bulma/sass/components/_all.sass";
+@import "../../node_modules/bulma/sass/elements/_all.sass";
+@import "../../node_modules/bulma/sass/form/_all.sass";
+@import "../../node_modules/bulma/sass/grid/_all.sass";
+@import "../../node_modules/bulma/sass/helpers/_all.sass";
+@import "../../node_modules/bulma/sass/layout/_all.sass";
+@import "../../node_modules/bulma/sass/utilities/_all.sass";
+
+// Bulma specifics
+// @import "../../node_modules/bulma/sass/elements/button.sass";
+// @import "../../node_modules/bulma/sass/elements/container.sass";
+// @import "../../node_modules/bulma/sass/elements/title.sass";
+// @import "../../node_modules/bulma/sass/components/navbar.sass";
+
+//@import "../../node_modules/bulma/bulma.sass";
+
+// Import customized sass
+@import "elements/_all"
+@import "components/_all"
+@import "grid/_all"
+@import "layout/_all"
+
+// Fonts
+@import "_fonts"
+
+// Images
+@import "_images"
