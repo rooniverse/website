@@ -26,7 +26,7 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript: |
-           az cdn endpoint purge --content-paths  "/*" --profile-name "rooniverse" --name "https://rooniverse.z33.web.core.windows.net/" --resource-group "PersonalWebsite"
+           az cdn endpoint purge --content-paths  "/*" --profile-name "rooniverse" --name "https://rooniverse.azureedge.net" --resource-group "PersonalWebsite"
            
   # Azure logout 
     - name: logout
