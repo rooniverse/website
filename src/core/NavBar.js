@@ -6,7 +6,7 @@ function NavBar() {
     <div className="NavBar">
       <nav className="navbar is-fixed-top">
         <div className="navbar-brand">
-          <a className="navbar-item" href="http://www.rooniverse.co.uk">
+          <a className="navbar-item" href="https://www.therooniverse.com">
             <span className="logo-font is-size-2 is-size-4-mobile">R</span>
           </a>
           <div className="navbar-burger" data-target="mainNavbar">
