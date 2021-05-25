@@ -14,19 +14,32 @@ jobs:
     - uses: azure/login@v1
       with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-          
-    - name: Upload to blob storage
-      uses: azure/CLI@v1
+
+    - name: Install npm packages
+      shell: bash
+      run: |
+        cd $GITHUB_WORKSPACE
+        npm install
+
+    - name: Build app
+      shell: bash
+      run: |
+        cd $GITHUB_WORKSPACE
+        npm run build
+
+    - name: Publish app
+      uses: Azure/cli@v1.0.0
       with:
-        azcliversion: 2.0.72
+        azcliversion: latest
         inlineScript: |
-            az storage blob upload-batch --account-name rooniverse -d '$web' -s .
+          az storage blob upload-batch -s $GITHUB_WORKSPACE/build -d \$web --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }}
+
     - name: Purge CDN endpoint
       uses: azure/CLI@v1
       with:
         azcliversion: 2.0.72
         inlineScript: |
-           az cdn endpoint purge --content-paths  "/*" --profile-name "rooniverse" --name "https://rooniverse.azureedge.net" --resource-group "PersonalWebsite"
+           az cdn endpoint purge --content-paths  "/*" --profile-name "${{ secrets.STORAGE_ACCOUNT_NAME }}" --name "${{ secrets.CDN_ENDPOINT }}" --resource-group "${{ secrets.AZURE_RESOURCE_GROUP }}"
            
   # Azure logout 
     - name: logout
