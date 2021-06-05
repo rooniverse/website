@@ -3,14 +3,19 @@ import BlogCard from '../components/BlogCard';
 import SmallBlogCard from '../components/SmallBlogCard';
 import blogCardCollection from '../data/BlogCardCollection';
 import showerThoughtsCollection from '../data/ShowerThoughtsCollection';
-import {Helmet} from "react-helmet";
+import SiteData from '../data/SiteData';
+import {Helmet} from "react-helmet-async";
 
 function Home() {
-  const blogCards = blogCardCollection.map((blogCard) =>
+  const SiteDataState = SiteData;
+  const blogCardCollectionState = blogCardCollection;
+  const showerThoughtsCollectionState = showerThoughtsCollection;
+
+  const blogCardElements = blogCardCollectionState.map((blogCard) =>
     <BlogCard key={blogCard.Id} blogCard={blogCard}/>
   );
 
-  const showerThoughts = showerThoughtsCollection.map((showerThought) =>
+  const showerThoughtElements = showerThoughtsCollectionState.map((showerThought) =>
     <SmallBlogCard key={showerThought.Id} showerThought={showerThought} />
   );
 
@@ -18,8 +23,12 @@ function Home() {
     <div className="Home">
       <Helmet>
           <meta charSet="utf-8" />
-          <title>Welcome to the Rooniverse, a tech blog</title>
-          <link rel="canonical" href="https://www.rooniverse.co.uk" />
+          <title>{SiteDataState.IntroText}</title>
+          <link rel="canonical" href={SiteDataState.WebsiteURL} />
+          <meta
+            name="description"
+            content={SiteDataState.SiteDesctiption}
+          />
       </Helmet>
       <HeroBanner />
       <div className="container">
@@ -27,11 +36,11 @@ function Home() {
           <div className="columns is-multiline">
             <div className="column is-three-quarters">
               <h3 className="title is-3">Latest Posts</h3>
-                {blogCards}
+                {blogCardElements}
             </div>
             <div className="column">
               <h3 className="title is-3">Shower Thoughts</h3>
-              {showerThoughts}
+              {showerThoughtElements}
             </div>
           </div>
         </div>

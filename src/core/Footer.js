@@ -5,7 +5,7 @@ function Footer() {
           <div className="container">
             <div className="content has-text-centered">
               <p>
-              <strong className="logo-font">Created</strong> in the <a href="https://www.therooniverse.com">Rooniverse</a>.
+              <strong className="logo-font">Created</strong> in the <a href="http://www.rooniverse.co.uk">Rooniverse</a>.
               </p>
             </div>
           </div>
