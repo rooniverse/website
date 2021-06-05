@@ -3,7 +3,8 @@ import blogCardCollection from '../data/BlogCardCollection';
 import {Helmet} from "react-helmet";
 
 function ExampleBlog() {
-    const blogData = blogCardCollection.find(blog => blog.Id === 0);
+    const blogCardCollectionState = blogCardCollection;
+    const blogData = blogCardCollectionState.find(blog => blog.Id === 0);
     const tagItems = blogData.Tags.map((tag) =>
         <span key={tag} className="tag">
             {tag}

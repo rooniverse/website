@@ -1,15 +1,14 @@
-import ExampleBlog from '../blog-posts/ExampleBlog';
+import DtosEntitiesModels from '../blog-posts/DtosEntitiesModels';
 import Home from "../core/Home";
 
 const routes = [
   {
-    path: "/example-post",
-    component: ExampleBlog
+    path: "/dtos-vs-entities-vs-models",
+    component: DtosEntitiesModels
   },
   {
     path: "/",
-    component: Home,
-    exact: true
+    component: Home
   }
 ];
 

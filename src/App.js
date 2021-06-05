@@ -3,14 +3,17 @@ import './App.sass';
 import Header from  "./core/Header";
 import Footer from  "./core/Footer";
 import MainContent from  "./core/MainContent";
+import {HelmetProvider} from "react-helmet-async";
 
 function App() {
   return (
-    <div className="App">
-      <Header />  
-      <MainContent />
-      <Footer />
-    </div>
+    <HelmetProvider>
+      <div className="App">
+        <Header />  
+        <MainContent />
+        <Footer />
+      </div>
+    </HelmetProvider>
   );
 }
 
