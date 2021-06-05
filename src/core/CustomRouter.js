@@ -3,12 +3,13 @@ import {
     Switch,
     Route,
   } from "react-router-dom";
- 
 import routes from '../data/BlogRoutes';
+import ScrollToTop from "./ScrollToTop";
 
 function CustomRouter() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="CustomRouter">
         <Switch>
           {routes.map((route, i) => (
