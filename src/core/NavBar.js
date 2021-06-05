@@ -28,7 +28,7 @@ function NavBar() {
               Blog
             </a> */}
             <div className="navbar-item is-hidden-desktop pt-6">
-              <a href={SiteData.TwitterUrl}>
+              <a href={SiteDataState.TwitterUrl}>
                 <span className="icon is-twitter-blue">
                   <FontAwesomeIcon icon={faTwitter} size="2x" />
                 </span>
@@ -40,7 +40,7 @@ function NavBar() {
             <div className="navbar-item">
               <div className="field is-grouped">
                 <p className="control">
-                  <a className="navbar-item" href={SiteData.TwitterUrl}>
+                  <a className="navbar-item" href={SiteDataState.TwitterUrl}>
                     <span className="icon is-twitter-blue pr-6">
                       <FontAwesomeIcon icon={faTwitter} size="2x" />
                     </span>
