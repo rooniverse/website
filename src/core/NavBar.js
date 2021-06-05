@@ -1,7 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import SiteData from '../data/SiteData';
 
 function NavBar() {
+  const SiteDataState = SiteData;
+
   return (
     <div className="NavBar">
       <nav className="navbar is-fixed-top">
@@ -25,7 +28,7 @@ function NavBar() {
               Blog
             </a> */}
             <div className="navbar-item is-hidden-desktop pt-6">
-              <a href="https://twitter.com/DavidRooN3y">
+              <a href={SiteData.TwitterUrl}>
                 <span className="icon is-twitter-blue">
                   <FontAwesomeIcon icon={faTwitter} size="2x" />
                 </span>
@@ -37,7 +40,7 @@ function NavBar() {
             <div className="navbar-item">
               <div className="field is-grouped">
                 <p className="control">
-                  <a className="navbar-item" href="https://twitter.com/DavidRooN3y">
+                  <a className="navbar-item" href={SiteData.TwitterUrl}>
                     <span className="icon is-twitter-blue pr-6">
                       <FontAwesomeIcon icon={faTwitter} size="2x" />
                     </span>
