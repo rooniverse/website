@@ -7,7 +7,7 @@ import SiteData from '../data/SiteData';
 import {Helmet} from "react-helmet-async";
 
 function Home() {
-  const SiteDataState = SiteData;
+  const siteDataState = SiteData;
   const blogCardCollectionState = blogCardCollection;
   const showerThoughtsCollectionState = showerThoughtsCollection;
 
@@ -23,11 +23,11 @@ function Home() {
     <div className="Home">
       <Helmet>
           <meta charSet="utf-8" />
-          <title>{SiteDataState.IntroText}</title>
-          <link rel="canonical" href={SiteDataState.WebsiteURL} />
+          <title>{siteDataState.IntroText}</title>
+          <link rel="canonical" href={siteDataState.WebsiteURL} />
           <meta
             name="description"
-            content={SiteDataState.SiteDesctiption}
+            content={siteDataState.SiteDesctiption}
           />
       </Helmet>
       <HeroBanner />
