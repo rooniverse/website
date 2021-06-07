@@ -4,15 +4,18 @@ import Header from  "./core/Header";
 import Footer from  "./core/Footer";
 import MainContent from  "./core/MainContent";
 import {HelmetProvider} from "react-helmet-async";
+import GAListener from './components/GAListener';
 
 function App() {
   return (
     <HelmetProvider>
-      <div className="App">
-        <Header />  
-        <MainContent />
-        <Footer />
-      </div>
+      <GAListener>
+        <div className="App">
+          <Header />  
+          <MainContent />
+          <Footer />
+        </div>
+      </GAListener>
     </HelmetProvider>
   );
 }

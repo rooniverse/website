@@ -2,6 +2,7 @@ import BlogHeroBanner from '../components/BlogHeroBanner';
 import blogCardCollection from '../data/BlogCardCollection';
 import SiteData from '../data/SiteData';
 import {Helmet} from "react-helmet-async";
+import AdSense from 'react-adsense';
 
 function DtosEntitiesModels() {
     const blogCardCollectionState = blogCardCollection;
@@ -127,17 +128,24 @@ function DtosEntitiesModels() {
                         </div>
                 
                         {/* Advert */}
-                        {/* <div className="section">
+                        <div className="section">
                             <section className="hero is-info is-bold is-small promo-block">
                                 <div className="hero-body">
                                     <div className="container">
                                         <aside>
-                                            Advert
+                                        <AdSense.Google
+                                            client={process.env.GOOGLE_ADSENSE_CLIENT_ID}
+                                            slot='7806394673'
+                                            style={{ display: 'block' }}
+                                            format='auto'
+                                            responsive='true'
+                                            layoutKey='-gw-1+2a-9x+5c'
+                                            />
                                         </aside>
                                     </div>
                                 </div>
                             </section>
-                        </div>*/}
+                        </div>
                     </div>
                 </div>
             </div>
