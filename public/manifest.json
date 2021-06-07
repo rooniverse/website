@@ -1,6 +1,6 @@
 {
-  "short_name": "Rooniverse",
-  "name": "Welcome to the Rooniverse",
+  "short_name": "TheRooniverse",
+  "name": "The Rooniverse",
   "icons":[
     {
        "src":"/android-chrome-192x192.png",
@@ -13,8 +13,8 @@
        "type":"image/png"
     }
   ],
-  "start_url": ".",
+  "start_url": "./index.html",
   "display": "standalone",
-  "theme_color": "#ffffff",
-  "background_color": "#fafafa"
+  "theme_color": "#66b6de",
+  "background_color": "#fff"
 }

@@ -1,8 +1,5 @@
 import CustomRouter from "./CustomRouter";
-import ReactGA from 'react-ga';
 import {Helmet} from "react-helmet-async";
-ReactGA.initialize("UA-198025571-1");
-ReactGA.pageview(window.location.pathname + window.location.search);
 
 function MainContent() {
   return (
