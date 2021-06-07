@@ -4,9 +4,6 @@ import CustomRouter from "./CustomRouter";
 function MainContent() {
   return (
       <div className="MainContent">
-        {/* <Helmet>
-          <script data-ad-client="ca-pub-2181872713880883" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        </Helmet> */}
         <CustomRouter />
       </div>
   );
