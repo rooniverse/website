@@ -18,7 +18,9 @@ function BlogCard(props) {
           <div className="columns">
             <div className="column is-one-fifth">
               <figure className="image is-4by3">
-                <img src={blogImageSrc} alt={props.blogCard.BlogImageName} />
+                <Link to={props.blogCard.BlogUrl}>
+                  <img src={blogImageSrc} alt={props.blogCard.BlogImageName} />
+                </Link>
               </figure>
             </div>
             <div className="column">
