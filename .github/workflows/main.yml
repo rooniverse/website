@@ -15,6 +15,12 @@ jobs:
       with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
+    - name: Replace ENV tokens
+      env: 
+        PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
+        GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
+        GOOGLE_ADSENSE_CLIENT_ID: ${{ secrets.GOOGLE_ADSENSE_CLIENT_ID }}
+
     - name: Install npm packages
       shell: bash
       run: |
