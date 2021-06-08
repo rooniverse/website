@@ -22,11 +22,19 @@ jobs:
         npm install
 
     - name: Replace ENV tokens
-      uses: falnyr/replace-env-vars-action@master
-      env: 
-        PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
-        GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
-        GOOGLE_ADSENSE_CLIENT_ID: ${{ secrets.GOOGLE_ADSENSE_CLIENT_ID }}
+      uses: TickX/var-to-dotenv@v1.1.1
+      with:
+        key: 'PUBLIC_URL'
+        value: ${{ secrets.PUBLIC_URL }}
+        envPath: '.env'
+      with:
+        key: 'GOOGLE_ANALYTICS_ID'
+        value: ${{ secrets.GOOGLE_ANALYTICS_ID }}
+        envPath: '.env'
+      with:
+        key: 'GOOGLE_ADSENSE_CLIENT_ID'
+        value: ${{ secrets.GOOGLE_ADSENSE_CLIENT_ID }}
+        envPath: '.env'
 
     - name: Build app
       shell: bash
