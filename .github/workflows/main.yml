@@ -21,26 +21,13 @@ jobs:
         cd $GITHUB_WORKSPACE
         npm install
 
-    - name: Replace ENV tokens - PUBLIC_URL
-      uses: TickX/var-to-dotenv@v1.1.1
-      with:
-        key: 'PUBLIC_URL'
-        value: ${{ secrets.PUBLIC_URL }}
-        envPath: '.env'
-      
-    - name: Replace ENV tokens - GOOGLE_ANALYTICS_ID
-      uses: TickX/var-to-dotenv@v1.1.1
-      with:
-        key: 'GOOGLE_ANALYTICS_ID'
-        value: ${{ secrets.GOOGLE_ANALYTICS_ID }}
-        envPath: '.env'
-
-    - name: Replace ENV tokens - GOOGLE_ADSENSE_CLIENT_ID
-      uses: TickX/var-to-dotenv@v1.1.1
-      with:
-        key: 'GOOGLE_ADSENSE_CLIENT_ID'
-        value: ${{ secrets.GOOGLE_ADSENSE_CLIENT_ID }}
-        envPath: '.env'
+    - name: Create env file
+        run: |
+          touch .env
+          echo PUBLIC_URL=${{ secrets.PUBLIC_URL }} >> .env
+          echo GOOGLE_ANALYTICS_ID=${{ secrets.GOOGLE_ANALYTICS_ID }} >> .env
+          echo GOOGLE_ADSENSE_CLIENT_ID=${{ secrets.GOOGLE_ADSENSE_CLIENT_ID }} >> .env
+          cat .env
 
     - name: Build app
       shell: bash
