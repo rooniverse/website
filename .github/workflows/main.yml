@@ -22,6 +22,7 @@ jobs:
         npm install
 
     - name: Replace ENV tokens
+      uses: falnyr/replace-env-vars-action@master
       env: 
         PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
         GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
