@@ -22,12 +22,12 @@ jobs:
         npm install
 
     - name: Create env file
-        run: |
-          touch .env
-          echo PUBLIC_URL=${{ secrets.PUBLIC_URL }} >> .env
-          echo GOOGLE_ANALYTICS_ID=${{ secrets.GOOGLE_ANALYTICS_ID }} >> .env
-          echo GOOGLE_ADSENSE_CLIENT_ID=${{ secrets.GOOGLE_ADSENSE_CLIENT_ID }} >> .env
-          cat .env
+      run: |
+        touch .env
+        echo PUBLIC_URL=${{ secrets.PUBLIC_URL }} >> .env
+        echo GOOGLE_ANALYTICS_ID=${{ secrets.GOOGLE_ANALYTICS_ID }} >> .env
+        echo GOOGLE_ADSENSE_CLIENT_ID=${{ secrets.GOOGLE_ADSENSE_CLIENT_ID }} >> .env
+        cat .env
 
     - name: Build app
       shell: bash
