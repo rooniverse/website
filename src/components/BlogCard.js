@@ -9,7 +9,7 @@ function BlogCard(props) {
       {tag}
     </span>
   );
-  const blogImageSrc = require(`../content/hero-backgrounds/minified/${props.blogCard.BlogImageName}.jpg`).default;
+  const blogImageSrc = require(`../content/blog-card-backgrounds/${props.blogCard.BlogImageName}.jpg`).default;
 
   return (
     <div className="BlogCard">
