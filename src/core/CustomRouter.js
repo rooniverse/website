@@ -5,7 +5,6 @@ import {
   } from "react-router-dom";
 import routes from '../data/BlogRoutes';
 import ScrollToTop from "./ScrollToTop";
-import GAListener from './../components/GAListener';
 
 function CustomRouter() {
   return (
