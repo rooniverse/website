@@ -5,6 +5,7 @@ import {
   } from "react-router-dom";
 import routes from '../data/BlogRoutes';
 import ScrollToTop from "./ScrollToTop";
+import GAListener from './../components/GAListener';
 
 function CustomRouter() {
   return (
@@ -13,7 +14,7 @@ function CustomRouter() {
       <div className="CustomRouter">
         <Switch>
           {routes.map((route, i) => (
-            <RouteWithSubRoutes key={i} {...route} />
+              <RouteWithSubRoutes key={i} {...route} />
           ))}
         </Switch>
       </div>
@@ -29,8 +30,8 @@ function RouteWithSubRoutes(route) {
     <Route
       path={route.path}
       render={props => (
-        // pass the sub-routes down to keep nesting
-        <route.component {...props} routes={route.routes} />
+          // pass the sub-routes down to keep nesting
+          <route.component {...props} routes={route.routes} />
       )}
     />
   );

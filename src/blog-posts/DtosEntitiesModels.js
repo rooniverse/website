@@ -134,7 +134,7 @@ function DtosEntitiesModels() {
                                     <div className="container">
                                         <aside>
                                         <AdSense.Google
-                                            client={process.env.GOOGLE_ADSENSE_CLIENT_ID}
+                                            client={process.env.REACT_APP_GOOGLE_ADSENSE_CLIENT_ID}
                                             slot='7806394673'
                                             style={{ display: 'block' }}
                                             format='auto'
