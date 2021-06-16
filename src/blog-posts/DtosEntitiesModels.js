@@ -150,7 +150,7 @@ function DtosEntitiesModels() {
 
                         {/* Comments */}
                         <div className="section">
-                            <section className="">
+                            <section className="comments-section">
                                 <DisqusComments 
                                     DisqusSiteShortName={SiteDataState.ShortName} 
                                     BlogPostURL={fullBlogURL} 
