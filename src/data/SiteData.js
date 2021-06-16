@@ -1,6 +1,7 @@
 const SiteData = 
 {
   Name: "The Rooniverse",
+  ShortName: "therooniverse",
   IntoText: "Welcome to the Rooniverse, a tech blog",
   WebsiteURL: process.env.REACT_APP_PUBLIC_URL,
   TwitterHandle: "@TheRooniverse",

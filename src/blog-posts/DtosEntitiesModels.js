@@ -1,4 +1,5 @@
 import BlogHeroBanner from '../components/BlogHeroBanner';
+import DisqusComments from '../components/DisqusComments';
 import blogCardCollection from '../data/BlogCardCollection';
 import SiteData from '../data/SiteData';
 import {Helmet} from "react-helmet-async";
@@ -144,6 +145,17 @@ function DtosEntitiesModels() {
                                         </aside>
                                     </div>
                                 </div>
+                            </section>
+                        </div>
+
+                        {/* Comments */}
+                        <div className="section">
+                            <section className="">
+                                <DisqusComments 
+                                    DisqusSiteShortName={SiteDataState.ShortName} 
+                                    BlogPostURL={fullBlogURL} 
+                                    BlogPostId={blogData.BlogStringIdentifier} 
+                                    BlogPostTitle={blogData.BlogTitle} />
                             </section>
                         </div>
                     </div>

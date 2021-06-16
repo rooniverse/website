@@ -1,6 +1,7 @@
 const blogCardCollection = [
     {
       Id: 0,
+      BlogStringIdentifier: "dtos-vs-entities-vs-models",
       BlogUrl: "/dtos-vs-entities-vs-models",
       BlogImageName: "keyboard", 
       BlogDate: "2021-06-05", 
