@@ -5,6 +5,7 @@ import blogCardCollection from '../data/BlogCardCollection';
 import showerThoughtsCollection from '../data/ShowerThoughtsCollection';
 import SiteData from '../data/SiteData';
 import {Helmet} from "react-helmet-async";
+import AdSense from 'react-adsense';
 
 function Home() {
   const siteDataState = SiteData;
@@ -37,6 +38,25 @@ function Home() {
             <div className="column is-three-quarters">
               <h3 className="title is-3">Latest Posts</h3>
                 {blogCardElements}
+                {/* Advert */}
+                <div className="section">
+                  <section className="hero is-info is-bold is-small promo-block">
+                      <div className="hero-body">
+                          <div className="container">
+                              <aside>
+                              <AdSense.Google
+                                  client={process.env.REACT_APP_GOOGLE_ADSENSE_CLIENT_ID}
+                                  slot='7806394673'
+                                  style={{ display: 'block' }}
+                                  format='auto'
+                                  responsive='true'
+                                  layoutKey='-gw-1+2a-9x+5c'
+                                  />
+                              </aside>
+                          </div>
+                      </div>
+                  </section>
+              </div>
             </div>
             <div className="column">
               <h3 className="title is-3">Shower Thoughts</h3>
