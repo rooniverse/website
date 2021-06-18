@@ -40,7 +40,7 @@ function Home() {
                 {blogCardElements}
                 {/* Advert */}
                 <div className="section">
-                  <section className="hero is-info is-bold is-small promo-block">
+                  <section className="hero promo-block">
                       <div className="hero-body">
                           <div className="container">
                               <aside>
